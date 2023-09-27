@@ -9,12 +9,9 @@ import { cn } from '@/lib/utils';
 const Dialog = DialogPrimitive.Root;
 
 const DialogTrigger = DialogPrimitive.Trigger;
-
-interface PortalWithCN extends DialogPrimitive.DialogPortalProps {
-    className?: string;
-}
-
-const DialogPortal = ({ className, ...props }: PortalWithCN) => (
+// @ts-ignore
+const DialogPortal = ({ className, ...props }: DialogPrimitive.DialogPortalProps) => (
+    // @ts-ignore
     <DialogPrimitive.Portal className={cn(className)} {...props} />
 );
 DialogPortal.displayName = DialogPrimitive.Portal.displayName;
