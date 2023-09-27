@@ -35,8 +35,6 @@ export function ModeToggle() {
 
 export function AltModeToggle() {
     const { setTheme, theme } = useTheme();
-    console.log(theme);
-
     return (
         <Button
             variant="outline"
